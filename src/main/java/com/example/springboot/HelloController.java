@@ -1,7 +1,9 @@
 package com.example.springboot;
 
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.HandlerMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMappingInfo;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
@@ -11,14 +13,26 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
+		const String directory = "
+<table>
+  <tr>
+    <th>Thing</th>
+    <th>Route</th>
+  </tr>
+  <tr>
+    <td>How are you?</td>
+		<td>Random Neuron Firings</td>
+    <td>Runtime Environment</td>
+  </tr>
+  <tr>
+    <td><a href="/how">/how</a></td>
+    <td><a href="/yow">/yow</a></td>
+    <td><a href="/envs">/envs</a></td>
+  </tr>
+</table>
+		"
 
-		Map<RequestMappingInfo, HandlerMethod> handlerMethods = re.getHandlerMethods();
-		List<String> urls = new ArrayList<>();
-		for (Entry<RequestMappingInfo, HandlerMethod> entry : handlerMethods.entrySet()) {
-				urls.addAll((entry.getKey().getPatternsCondition().getPatterns()));
-		}
-
-		return "Greetings from Spring Boot + Tanzu!<br><br>\n" + urls;
+		return "Greetings from Spring Boot + Tanzu!<br><br>\n" + directory;
 	}
 
 	@RequestMapping("/how")
