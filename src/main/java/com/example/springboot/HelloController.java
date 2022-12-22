@@ -3,6 +3,8 @@ package com.example.springboot;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Map
+
 @RestController
 public class HelloController {
 
@@ -11,10 +13,19 @@ public class HelloController {
 		return "Greetings from Spring Boot + Tanzu!";
 	}
 
-
-@RequestMapping("/how")
+	@RequestMapping("/how")
 	public String how() {
 		return "How are you today?";
+	}
+
+	@RequestMapping("/env")
+	public String env(String name) {
+		val = System.getenv(name);
+		if (val != null) {
+			return "Environment variable: " + name + " = " + val + "\n"
+		} else {
+			return "Environment variable: " + name + " is not assigned\n"
+		}
 	}
 
 }
