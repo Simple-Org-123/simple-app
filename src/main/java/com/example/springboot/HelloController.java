@@ -41,7 +41,7 @@ public class HelloController {
 
 	@RequestMapping("/yow")
 	public String yow() {
-		String uri = "http://simple-api";
+		String uri = "https://simple-api.dev-tap.tap.bmath.nyc";
 		RestTemplate restTemplate = new RestTemplate();
 		String result = restTemplate.getForObject(uri, String.class);
 		return result;
