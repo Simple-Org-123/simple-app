@@ -13,7 +13,7 @@ public class HelloController {
 
 
 @RequestMapping("/how")
-	public String index() {
+	public String how() {
 		return "How are you today?";
 	}
 
