@@ -31,8 +31,10 @@ public class HelloController {
 	@RequestMapping("/envs")
 	public String envs() {
 		Map<String, String> envMap = System.getenv();
+		String buffer;
 		for (String envName : envMap.keySet()) {
-			return  "Environment variable: " + envName + " = " + envMap.get(envName) + "\n";
+			buffer +=  "Environment variable: " + envName + " = " + envMap.get(envName) + "\n";
 		}
+		return(buffer)
 	}
 }
