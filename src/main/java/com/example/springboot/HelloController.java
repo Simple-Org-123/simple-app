@@ -27,4 +27,12 @@ public class HelloController {
 			return "Environment variable: " + name + " is not assigned\n";
 		}
 	}
+
+	#RequestMapping("envs")
+	public String envs() {
+		Map<String, String> envMap = System.getenv();
+		for (String envName : envMap.keySet()) {
+			return  "Environment variable: " + envName + " = " + envMap.get(envName) + "\n";
+		}
+	}
 }
