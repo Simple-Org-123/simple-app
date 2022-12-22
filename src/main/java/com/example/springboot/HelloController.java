@@ -18,12 +18,14 @@ public class HelloController {
 		directory += "</tr>";
 		directory += "<tr>";
 		directory += "  <td>How are you?</td>";
-		directory += "  <td>Random Neuron Firings</td>";
-		directory += "  <td>Runtime Environment</td>";
+		directory += "  <td><a href=\"/how\">/how</a></td>";
 		directory += "</tr>";
 		directory += "<tr>";
-		directory += "  <td><a href=\"/how\">/how</a></td>";
+		directory += "  <td>Random Neuron Firings</td>";
 		directory += "  <td><a href=\"/yow\">/yow</a></td>";
+		directory += "</tr>";
+		directory += "<tr>";
+		directory += "  <td>Runtime Environment</td>";		
 		directory += "  <td><a href=\"/envs\">/envs</a></td>";
 		directory += "</tr>";
 		directory += "</table>";
