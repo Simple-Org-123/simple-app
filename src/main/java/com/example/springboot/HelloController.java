@@ -2,6 +2,7 @@ package com.example.springboot;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
 
@@ -37,4 +38,13 @@ public class HelloController {
 		}
 		return(buffer);
 	}
+
+	@RequestMapping("/yow")
+	public String yow() {
+		String uri = "http://simple-api:8080";
+		RestTemplate restTemplate = new RestTemplate();
+		String result = restTemplate.getForObject(uri, String.class);
+		return result;
+	}
+
 }
