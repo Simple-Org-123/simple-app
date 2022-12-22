@@ -11,7 +11,14 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "Greetings from Spring Boot + Tanzu!";
+
+		Map<RequestMappingInfo, HandlerMethod> handlerMethods = re.getHandlerMethods();
+		List<String> urls = new ArrayList<>();
+		for (Entry<RequestMappingInfo, HandlerMethod> entry : handlerMethods.entrySet()) {
+				urls.addAll((entry.getKey().getPatternsCondition().getPatterns()));
+		}
+
+		return "Greetings from Spring Boot + Tanzu!<br><br>\n" + urls;
 	}
 
 	@RequestMapping("/how")
