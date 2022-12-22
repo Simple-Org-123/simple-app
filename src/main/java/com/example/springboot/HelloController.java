@@ -28,7 +28,7 @@ public class HelloController {
 		}
 	}
 
-	#RequestMapping("envs")
+	@RequestMapping("envs")
 	public String envs() {
 		Map<String, String> envMap = System.getenv();
 		for (String envName : envMap.keySet()) {
