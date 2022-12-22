@@ -20,7 +20,7 @@ public class HelloController {
 
 	@RequestMapping("/env")
 	public String env(String name) {
-		val = System.getenv(name);
+		String val = System.getenv(name);
 		if (val != null) {
 			return "Environment variable: " + name + " = " + val + "\n";
 		} else {
