@@ -1,8 +1,6 @@
 package com.example.springboot;
 
-import org.springframework.web.bind.annotation.HandlerMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMappingInfo;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,25 +11,22 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		const String directory = """
-<table>
-  <tr>
-    <th>Thing</th>
-    <th>Route</th>
-  </tr>
-  <tr>
-    <td>How are you?</td>
-		<td>Random Neuron Firings</td>
-    <td>Runtime Environment</td>
-  </tr>
-  <tr>
-    <td><a href="/how">/how</a></td>
-    <td><a href="/yow">/yow</a></td>
-    <td><a href="/envs">/envs</a></td>
-  </tr>
-</table>
-"""
-
+		String directory = "<table>";
+		directory += "<tr>";
+		directory += "  <th>Thing</th>";
+		directory += "  <th>Route</th>";
+		directory += "</tr>";
+		directory += "<tr>";
+		directory += "  <td>How are you?</td>";
+		directory += "  <td>Random Neuron Firings</td>";
+		directory += "  <td>Runtime Environment</td>";
+		directory += "</tr>";
+		directory += "<tr>";
+		directory += "  <td><a href=\"/how\">/how</a></td>";
+		directory += "  <td><a href=\"/yow\">/yow</a></td>";
+		directory += "  <td><a href=\"/envs\">/envs</a></td>";
+		directory += "</tr>";
+		directory += "</table>";
 		return "Greetings from Spring Boot + Tanzu!<br><br>\n" + directory;
 	}
 
