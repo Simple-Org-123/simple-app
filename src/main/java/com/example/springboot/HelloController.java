@@ -11,4 +11,10 @@ public class HelloController {
 		return "Greetings from Spring Boot + Tanzu!";
 	}
 
+
+@RequestMapping("/how")
+	public String index() {
+		return "How are you today?";
+	}
+
 }
