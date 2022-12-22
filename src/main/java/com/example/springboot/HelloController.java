@@ -33,7 +33,7 @@ public class HelloController {
 		Map<String, String> envMap = System.getenv();
 		String buffer = "";
 		for (String envName : envMap.keySet()) {
-			buffer +=  "Environment variable: " + envName + " = " + envMap.get(envName) + "\n";
+			buffer +=  "Environment variable: " + envName + " = " + envMap.get(envName) + "<br>\n";
 		}
 		return(buffer);
 	}
