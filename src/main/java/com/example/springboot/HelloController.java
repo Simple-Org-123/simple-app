@@ -13,7 +13,7 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		const String directory = "
+		const String directory = """
 <table>
   <tr>
     <th>Thing</th>
@@ -30,7 +30,7 @@ public class HelloController {
     <td><a href="/envs">/envs</a></td>
   </tr>
 </table>
-		"
+"""
 
 		return "Greetings from Spring Boot + Tanzu!<br><br>\n" + directory;
 	}
