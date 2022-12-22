@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: tanzu-java-web-app
-  description: Tanzu Java Web App
+  name: simple-app
+  description: Simple Java Web App
   tags:
     - app-accelerator
     - java
@@ -10,7 +10,7 @@ metadata:
     - web
     - tanzu
   annotations:
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=tanzu-java-web-app'
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=simple-app'
 spec:
   type: service
   lifecycle: experimental
