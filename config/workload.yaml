@@ -1,10 +1,11 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: tanzu-java-web-app
+  name: simple-app
+  namespace: dev-tap
   labels:
     apps.tanzu.vmware.com/workload-type: web
-    app.kubernetes.io/part-of: tanzu-java-web-app
+    app.kubernetes.io/part-of: simple-app
 spec:
   params:
   - name: annotations
@@ -12,6 +13,6 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   source:
     git:
-      url: <https URL for your generated project's Git repository>
+      url: https://github.com/mathesonbr/simple-app.git
       ref:
         branch: main
