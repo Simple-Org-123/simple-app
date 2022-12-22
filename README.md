@@ -11,4 +11,3 @@ This is a sample Java Spring app for demonstration and hacking purposes.
 ## Running the sample
 
 see config/workload.yaml and deploy via tap
-pa
