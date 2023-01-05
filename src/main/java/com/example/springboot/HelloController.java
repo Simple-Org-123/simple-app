@@ -59,10 +59,9 @@ public class HelloController {
 
 	@RequestMapping("/yow")
 	public String yow() {
-		String uri = "https://simple-api.dev-tap.tap.bmath.nyc";
+		String uri = System.getenv("SIMPLE_API_URL");
 		RestTemplate restTemplate = new RestTemplate();
 		String result = restTemplate.getForObject(uri, String.class);
 		return result;
 	}
-
 }
