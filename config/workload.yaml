@@ -8,8 +8,8 @@ metadata:
     app.kubernetes.io/part-of: simple-app
 spec:
   env:
-    name: SIMPLE_API_URL
-    value: https://simple-api.dev-tap.tap.bmath.nyc
+    - name: SIMPLE_API_URL
+      value: https://simple-api.dev-tap.tap.bmath.nyc
   params:
   - name: annotations
     value:
