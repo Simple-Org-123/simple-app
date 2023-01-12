@@ -6,6 +6,8 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
 
+import oshi.software.os.OperatingSystem;
+Ff
 @RestController
 public class HelloController {
 
@@ -36,7 +38,13 @@ public class HelloController {
 	public String how() {
 		return "How are you today?";
 	}
-
+	
+	@RequestMapping("/uptime")
+	public String uptime() {
+		time = new SystemInfo().getOperatingSystem().getSystemUptime();
+		return time;
+	}
+	
 	@RequestMapping("/env")
 	public String env(String name) {
 		String val = System.getenv(name);
