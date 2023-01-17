@@ -46,6 +46,7 @@ public class HelloController {
 	}
 	
 	@RequestMapping("/env")
+	@RequestParam(required = false, defaultValue = "PATH", value="name") String name
 	public String env(String name) {
 		String val = System.getenv(name);
 		if (val != null) {
