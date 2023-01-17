@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Map;
 
 import oshi.software.os.OperatingSystem;
-Ff
+
 @RestController
 public class HelloController {
 
@@ -45,8 +45,7 @@ public class HelloController {
 		return time;
 	}
 	
-	@RequestMapping("/env")
-	@RequestParam(required = false, defaultValue = "PATH", value="name") String name
+	@RequestMapping("/env/{name}")
 	public String env(String name) {
 		String val = System.getenv(name);
 		if (val != null) {
@@ -55,7 +54,6 @@ public class HelloController {
 			return "Environment variable: " + name + " is not assigned\n";
 		}
 	}
-
 	@RequestMapping("/envs")
 	public String envs() {
 		Map<String, String> envMap = System.getenv();
