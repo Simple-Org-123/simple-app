@@ -9,7 +9,7 @@ metadata:
 spec:
   env:
     - name: SIMPLE_API_URL
-      value: https://simple-api.dev-tap.tap.bmath.nyc
+      value: https://simple-api
   params:
   - name: annotations
     value:
