@@ -34,7 +34,7 @@ public class HelloController {
 		directory += "</tr>";
 		
 		directory += "<tr>";
-		directory += "  <td>[internal]Runtime Environment</td>";		
+		directory += "  <td>[internal] Runtime Environment</td>";		
 		directory += "  <td><a href=\"/envs\">/envs</a></td>";
 		directory += "</tr>";
 		
