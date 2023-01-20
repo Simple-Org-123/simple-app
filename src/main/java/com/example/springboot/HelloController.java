@@ -37,6 +37,11 @@ public class HelloController {
 		return "How are you today?";
 	}
 	
+	@RequestMapping("/now")
+	public String how() {
+		return "Brown Cow?";
+	}
+	
 	@RequestMapping("/envs")
 	public String envs() {
 		Map<String, String> envMap = System.getenv();
