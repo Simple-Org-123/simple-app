@@ -28,6 +28,11 @@ public class HelloController {
 		directory += "</tr>";
 
 		directory += "<tr>";
+		directory += "  <td>[external] Random Neuron Firings</td>";
+		directory += "  <td><a href=\"/yow\">/yow</a></td>";
+		directory += "</tr>";
+		
+		directory += "<tr>";
 		directory += "  <td>[internal] Runtime Environment</td>";		
 		directory += "  <td><a href=\"/envs\">/envs</a></td>";
 		directory += "</tr>";
@@ -55,5 +60,14 @@ public class HelloController {
 			buffer +=  "Environment variable: " + envName + " = " + envMap.get(envName) + "<br>\n";
 		}
 		return(buffer);
+	}
+	
+	
+	@RequestMapping("/yow")
+	public String yow() {
+		String uri = System.getenv("SIMPLE_API_URL");
+		RestTemplate restTemplate = new RestTemplate();
+		String result = restTemplate.getForObject(uri, String.class);
+		return result;
 	}
 }
