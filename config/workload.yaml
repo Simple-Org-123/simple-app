@@ -9,7 +9,7 @@ metadata:
 spec:
   env:
     - name: SIMPLE_API_URL
-      value: https://simple-api
+      value: http://simple-api:8080
   params:
   - name: annotations
     value:
