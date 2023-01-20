@@ -8,7 +8,6 @@ import java.util.Map;
 
 @RestController
 public class HelloController {
-
 	@RequestMapping("/")
 	public String index() {
 		String directory = "<table>";
