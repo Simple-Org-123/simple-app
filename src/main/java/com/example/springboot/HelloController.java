@@ -12,23 +12,34 @@ public class HelloController {
 	@RequestMapping("/")
 	public String index() {
 		String directory = "<table>";
+		
 		directory += "<tr>";
 		directory += "  <th>Thing</th>";
 		directory += "  <th>Route</th>";
 		directory += "</tr>";
+		
 		directory += "<tr>";
 		directory += "  <td>[internal] How are you?</td>";
 		directory += "  <td><a href=\"/how\">/how</a></td>";
 		directory += "</tr>";
+		
+		directory += "<tr>";
+		directory += "  <td>[internal] How now?</td>";
+		directory += "  <td><a href=\"/now\">/now</a></td>";
+		directory += "</tr>";
+
 		directory += "<tr>";
 		directory += "  <td>[external] Random Neuron Firings</td>";
 		directory += "  <td><a href=\"/yow\">/yow</a></td>";
 		directory += "</tr>";
+		
 		directory += "<tr>";
 		directory += "  <td>[internal]Runtime Environment</td>";		
 		directory += "  <td><a href=\"/envs\">/envs</a></td>";
 		directory += "</tr>";
+		
 		directory += "</table>";
+		
 		return "Greetings from Spring Boot + Tanzu!<br><br>\n" + directory;
 	}
 
