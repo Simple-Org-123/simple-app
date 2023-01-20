@@ -36,16 +36,7 @@ public class HelloController {
 	public String how() {
 		return "How are you today?";
 	}
-		
-	@RequestMapping("/env/{name}")
-	public String env(String name) {
-		String val = System.getenv(name);
-		if (val != null) {
-			return "Environment variable: " + name + " = " + val + "\n";
-		} else {
-			return "Environment variable: " + name + " is not assigned\n";
-		}
-	}
+	
 	@RequestMapping("/envs")
 	public String envs() {
 		Map<String, String> envMap = System.getenv();
