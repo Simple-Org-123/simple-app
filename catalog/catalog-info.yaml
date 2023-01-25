@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: simple-app
   links:
-  - url: https://simple-app
+  - url: https://simple-app.dev.tap.bmath.nyc
     title: simple app
     icon: app
   description: Simple Java Web App
