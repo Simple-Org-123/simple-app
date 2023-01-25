@@ -2,6 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: simple-app
+  links:
+  - url: https://simple-app
+    title: simple app
+    icon: app
   description: Simple Java Web App
   tags:
     - app-accelerator
