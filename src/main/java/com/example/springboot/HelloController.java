@@ -34,7 +34,7 @@ public class HelloController {
 		
 		directory += "<tr>";
 		directory += "  <td>[external] All Neuron Firings</td>";
-		directory += "  <td><a href=\"/all\">/yow</a></td>";
+		directory += "  <td><a href=\"/all\">/all</a></td>";
 		directory += "</tr>";
 
 		directory += "<tr>";
