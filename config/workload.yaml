@@ -2,10 +2,11 @@ apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
   name: simple-app
-  namespace: dev-tap
+  namespace: dev
   labels:
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/part-of: simple-app
+    apps.tanzu.vmware.com/has-tests: "true"
 spec:
   env:
     - name: SIMPLE_API_URL
