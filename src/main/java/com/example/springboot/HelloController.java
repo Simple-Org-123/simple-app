@@ -68,7 +68,7 @@ public class HelloController {
 	}
 	
 	@RequestMapping("/all")
-	public String yow() {
+	public String all() {
 		String uri = System.getenv("SIMPLE_API_URL") + "/all";
 		RestTemplate restTemplate = new RestTemplate();
 		String result = restTemplate.getForObject(uri, String.class);
