@@ -54,7 +54,7 @@ public class HelloController {
 	
 	@RequestMapping("/now")
 	public String now() {
-		return "Brown Cow?";
+		return "And now for something completely different.";
 	}
 	
 	@RequestMapping("/envs")
