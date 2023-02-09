@@ -1,4 +1,7 @@
 spring:
+  mvc:
+    favicon:
+      enabled: true
   application:
     name: tanzu-java-web-app
 management:
