@@ -17,6 +17,6 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   source:
     git:
-      url: https://github.com/mathesonbr/simple-app.git
+      url: https://github.com/Simple-Org-123/simple-app.git
       ref:
         branch: main
