@@ -44,7 +44,7 @@ public class HelloController {
 		
 		directory += "</table>";
 		
-		return "Salutations from Spring Boot + Tanzu!<br><br>\n" + directory;
+		return "<h1>Salutations from Spring Boot + Tanzu!</h1><br><br>\n" + directory;
 	}
 
 	@RequestMapping("/how")
