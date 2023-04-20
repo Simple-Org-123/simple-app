@@ -49,7 +49,7 @@ public class HelloController {
 
 	@RequestMapping("/how")
 	public String how() {
-		return "How are you today?";
+		return "now brown cow?";
 	}
 	
 	@RequestMapping("/now")
