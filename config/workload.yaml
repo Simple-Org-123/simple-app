@@ -6,6 +6,7 @@ metadata:
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/part-of: simple-app
     apps.tanzu.vmware.com/has-tests: "true"
+    apps.tanzu.vmware.com/language: java
 spec:
   env:
     - name: SIMPLE_API_URL
