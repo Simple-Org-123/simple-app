@@ -23,7 +23,7 @@ public class HelloController {
 		directory += "</tr>";
 		
 		directory += "<tr>";
-		directory += "  <td>[internal] How now?</td>";
+		directory += "  <td>[internal] And now?</td>";
 		directory += "  <td><a href=\"/now\">/now</a></td>";
 		directory += "</tr>";
 
