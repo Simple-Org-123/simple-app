@@ -1,10 +1,19 @@
 package com.example.springboot;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.ui.Model;
 
 import java.util.Map;
+
+
+public class Person {
+	string firstName;
+	string lastname;
+	string email;
+}
 
 @RestController
 public class HelloController {
@@ -84,7 +93,7 @@ public class HelloController {
 	}
 
 	@GetMapping("/person")
-  public String entryForm(Model model) {
+  public String entryForm(Model Person) {
     model.addAttribute("person", new Person());
     return "person:";
   }
@@ -92,7 +101,7 @@ public class HelloController {
   @PostMapping(value = "/person", 
 		consumes = "application/json", 
 		produces = "application/json")
-	public String PostPerson(@ModelAttribute Person person, Model model) {
+	public String PostPerson(@Person person) {
 		String uri = System.getenv("CUSTOMER_PROFILE_SERVICE") + 
 			"/api/customer-profiles" +
 			"/";
