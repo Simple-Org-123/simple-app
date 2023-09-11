@@ -101,7 +101,7 @@ public class HelloController {
   @PostMapping(value = "/person", 
 		consumes = "application/json", 
 		produces = "application/json")
-	public String PostPerson(@Person person) {
+	public String PostPerson(Person person) {
 		String uri = System.getenv("CUSTOMER_PROFILE_SERVICE") + 
 			"/api/customer-profiles" +
 			"/";
