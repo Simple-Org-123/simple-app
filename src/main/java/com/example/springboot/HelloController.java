@@ -82,4 +82,21 @@ public class HelloController {
 		String result = restTemplate.getForObject(uri, String.class);
 		return result;
 	}
+
+	@GetMapping("/person")
+  public String entryForm(Model model) {
+    model.addAttribute("person", new Person());
+    return "person:";
+  }
+
+  @PostMapping(value = "/person", 
+		consumes = "application/json", 
+		produces = "application/json")
+	public String PostPerson(@ModelAttribute Person, Model model) {
+		String uri = System.getenv("CUSTOMER_PROFILE_SERVICE") + 
+			"/api/customer-profiles" +
+			"/";
+		String result = restTemplate.postForObject(uri, Person, person);
+    return "result";
+  }
 }
