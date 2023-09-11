@@ -92,11 +92,11 @@ public class HelloController {
   @PostMapping(value = "/person", 
 		consumes = "application/json", 
 		produces = "application/json")
-	public String PostPerson(@ModelAttribute Person, Model model) {
+	public String PostPerson(@ModelAttribute Person person, Model model) {
 		String uri = System.getenv("CUSTOMER_PROFILE_SERVICE") + 
 			"/api/customer-profiles" +
 			"/";
-		String result = restTemplate.postForObject(uri, Person, person);
+		String result = restTemplate.postForObject(uri, person, Person);
     return "result";
   }
 }
